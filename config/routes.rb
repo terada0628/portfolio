@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   root 'homes#top'
-  get 'homes/about' => 'homes#about'
+  get 'homes/about' => 'homes#about', as: 'about'
 
   devise_for :customers
 

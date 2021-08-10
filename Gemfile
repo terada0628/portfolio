@@ -61,7 +61,7 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# ユーザ認証
+# ユーザ認証.管理者機能
 gem 'devise'
 gem 'activeadmin'
 
@@ -86,10 +86,11 @@ gem 'enum_help'
 # 多言語化
 gem 'rails-i18n'
 
-# 管理者機能
-
 # googlemapのAPIキーを非公開にする
 gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end
 
 # コードフォーマット(リーダブルコード)
 gem 'rubocop', require:false
