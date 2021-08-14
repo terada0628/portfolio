@@ -95,6 +95,3 @@ end
 # コードフォーマット(リーダブルコード)
 gem 'rubocop', require:false
 gem 'rubocop-rails', require:false
-
-
-

@@ -1,2 +1,45 @@
-<h1>Items#show</h1>
-<p>Find me in app/views/items/show.html.erb</p>
+<div class="container">
+  <div class="row my-4">
+
+    <div class="col-4 col-md-3 col-lg-2">
+      <div class="genre ml-1">
+        <br><br><strong>ジャンル検索</strong>
+        <ul class="list-group">
+          <% @genres.each do |genre| %>
+          <li><%= link_to genre.name, items_path(genre.items) %></li>
+          <% end %>
+        </ul>
+      </div>
+      <br>
+      <div class="popular ml-1">
+        <strong>人気ランキング</strong>
+        <ol class="list-group">
+          <% @favorite_item.each do |item| %>
+          <li><%= link_to item.name, item_path(item) %></li>
+          <% end %>
+        </ol>
+      </div>
+    </div>
+
+    <div class="col-8 ml-md-3 ml-lg-5">
+      <%= attachment_image_tag @item, :image, size: '300x200', format:'jpeg' %>
+      <h2><%= @item.name %></h2><br>
+      <p>
+        <%= @item.introduction %><br>
+        ¥<%= @item.price %>
+      </p>
+
+
+      <% if customer_signed_in? %>
+        <%= form_with(model:@cart_item, url: cart_items_path, method: :post, local: true) do |f| %>
+          <%= f.hidden_field :item_id, value: @item.id %>
+          <%= f.select :amount, options_for_select((1..20).to_a), include_blank: '個数選択' %>
+          <%= f.submit "カートに入れる", class: "btn btn-success" %>
+        <% end %>
+
+      <% else %>
+        <p><strong>購入される方は <%= link_to "新規登録", new_customer_registration_path, class:"btn btn-outline-primary" %> または <%= link_to "ログイン", new_customer_session_path, class:"btn btn-outline-primary" %> してください</strong></p>
+      <% end %>
+    </div>
+  </div>
+</div>
