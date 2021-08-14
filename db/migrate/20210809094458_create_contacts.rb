@@ -5,7 +5,7 @@ class CreateContacts < ActiveRecord::Migration[5.2]
       t.timestamps
       t.integer :type
       t.string :title
-      t.text :contect
+      t.text :content
       t.string :family_name
       t.string :first_name
       t.string :family_name_kana

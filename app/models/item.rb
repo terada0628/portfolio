@@ -7,4 +7,10 @@ class Item < ApplicationRecord
   has_many :order_details
 
   belongs_to :genre
+
+  def favorited_by?(customer)
+    favorites.where(customer_id: customer.id).exists?
+  end
+
+
 end

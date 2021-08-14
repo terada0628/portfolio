@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 2021_08_09_135710) do
     t.datetime "updated_at", null: false
     t.integer "type"
     t.string "title"
-    t.text "contect"
+    t.text "content"
     t.string "family_name"
     t.string "first_name"
     t.string "family_name_kana"
