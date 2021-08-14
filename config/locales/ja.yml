@@ -1,12 +1,5 @@
 ja:
   enums:
-    user:
-      gender:
-        0: 男性
-        1: 女性
-
-ja:
-  enums:
     order:
       status:
         a: "食材準備中"
@@ -14,14 +7,15 @@ ja:
         c: "調理中"
         d: "配達中"
         f: "配達済み"
-
-ja:
+    content:
+      style:
+        a: "商品やお店についてのお問い合わせ"
+        b: "その他のお問い合わせ"
   date:
     formats:
       default: "%Y/%m/%d"
-
-ja:
   time:
     formats:
       default: '%H:%M'
+
 

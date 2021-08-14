@@ -64,9 +64,11 @@ class OrdersController < ApplicationController
   end
 
   def index
+    @orders = current_customer.orders.order(delivery_day: :DESC)
   end
 
   def show
+    @order = Order.find(params[:id])
   end
 
 

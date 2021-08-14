@@ -21,6 +21,7 @@
       </div>
     </div>
 
+
     <div class="col-8 ml-md-3 ml-lg-5">
       <%= attachment_image_tag @item, :image, size: '300x200', format:'jpeg' %>
       <h2><%= @item.name %></h2><br>
@@ -29,8 +30,24 @@
         ¥<%= @item.price %>
       </p>
 
-
       <% if customer_signed_in? %>
+      <!--いいね機能-->
+        <% if @item.favorited_by?(current_customer) %>
+        <p>
+          <%= link_to item_favorite_path(@item), method: :delete do %>
+          <i class="fas fa-star"></i>いいねを外す<i class="fas fa-star"></i>
+          <% end %>
+        </p>
+
+        <% else %>
+        <p>
+          <%= link_to item_favorites_path(@item), method: :post do %>
+          <i class="far fa-star"></i>いいねをする<i class="far fa-star"></i>
+          <% end %>
+        </p>
+        <% end %>
+
+      <!--カートに入れるフォーム-->
         <%= form_with(model:@cart_item, url:cart_items_path, method: :post, local: true) do |f| %>
           <%= f.hidden_field :item_id, value: @item.id %>
           <%= f.select :amount, options_for_select((1..20).to_a), include_blank: '個数選択' %>
@@ -40,6 +57,7 @@
       <% else %>
         <p><strong>購入される方は <%= link_to "新規登録", new_customer_registration_path, class:"btn btn-outline-primary" %> または <%= link_to "ログイン", new_customer_session_path, class:"btn btn-outline-primary" %> してください</strong></p>
       <% end %>
+
     </div>
   </div>
 </div>
