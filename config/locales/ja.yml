@@ -4,3 +4,24 @@ ja:
       gender:
         0: 男性
         1: 女性
+
+ja:
+  enums:
+    order:
+      status:
+        a: "食材準備中"
+        b: "調理準備中"
+        c: "調理中"
+        d: "配達中"
+        f: "配達済み"
+
+ja:
+  date:
+    formats:
+      default: "%Y/%m/%d"
+
+ja:
+  time:
+    formats:
+      default: '%H:%M'
+

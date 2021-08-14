@@ -29,7 +29,7 @@
             </div>
            </td>
            <td><%= cart_item.amount %></td>
-           <td><%= cart_item.sub_total_price.to_s(:delimited) %></td>
+           <td><%= cart_item.sub_total_price.to_s(:delimited) %>円</td>
          </tr>
        </tbody>
        <% end %>
@@ -54,8 +54,13 @@
         </tr>
 
         <tr>
-          <th>お届け日時</th>
-          <td><%= @order.delivery_day %> <%= @order.delivery_time %></td>
+          <th>お届け日</th>
+          <td><%= l @order.delivery_day %></td>
+        </tr>
+
+        <tr>
+          <th>時刻</th>
+          <td><%= l @order.delivery_time %></td>
         </tr>
 
       </table>
@@ -64,31 +69,41 @@
   </div>
 
 
-  <div class="row">
+  <div class="row my-4">
 
     <div class="col-7 col-sm-8 col-md-9">
       <table class="table table-bordered">
 
         <tr>
           <th>送料</th>
-          <td><%= @ship_cost %></td>
+          <td><%= @ship_cost %>円</td>
         </tr>
 
         <tr>
           <th>商品合計</th>
-          <td><%= @total_price.to_s(:delimited) %></td>
+          <td><%= @total_price.to_s(:delimited) %>円</td>
         </tr>
 
         <tr>
           <th>請求金額</th>
-          <td><%= @total_payment.to_s(:delimited) %></td>
+          <td><%= @total_payment.to_s(:delimited) %>円</td>
         </tr>
-
       </table>
     </div>
 
     <div class="col-5 col-sm-4 col-md-3 text-center d-flex align-items-center">
-      <%= link_to "注文を確定", orders_path, method: :post, class:"btn btn-success" %>
+      <%= form_with model: @order, url: orders_path, method: :post, local: true do |f| %>
+      <%= f.hidden_field :customer_id, :value => current_customer.id %>
+      <%= f.hidden_field :postal_code %>
+      <%= f.hidden_field :address %>
+      <%= f.hidden_field :name %>
+      <%= f.hidden_field :delivery_day %>
+      <%= f.hidden_field :delivery_time %>
+      <%= f.hidden_field :shipping_cost, :value => @ship_cost %>
+      <%= f.hidden_field :total_payment, :value => @total_payment %>
+      <%= f.hidden_field :payment_method %>
+      <%= f.submit '注文を確定',  class:"btn btn-success" %>
+      <% end %>
     </div>
   </div>
 
