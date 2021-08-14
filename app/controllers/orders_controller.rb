@@ -45,6 +45,22 @@ class OrdersController < ApplicationController
   end
 
   def create
+    @order = Order.new(order_params)
+    @order.customer_id = current_customer.id
+    @order.save
+
+    # 注文商品テーブル作成
+    current_customer.cart_items.each do |cart_item|
+      order_detail = @order.order_details.new
+      order_detail.order_id = @order.id
+      order_detail.item_id = cart_item.item_id
+      order_detail.price = cart_item.item.price
+      order_detail.amount = cart_item.amount
+      order_detail.save
+      cart_item.destroy
+    end
+    render :complete
+
   end
 
   def index
@@ -57,7 +73,8 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:orders).permit(:name, :customer_id, :postal_code, :address, :delivery_day, :delivery_time, :shipping_cost, :total_payment, :payment_method, :status)
+    params.require(:order).permit(:name, :customer_id, :postal_code, :address, :delivery_day, :delivery_time, :shipping_cost, :total_payment, :payment_method, :status)
+    # order_details_attributes:[:order_id, :item_id, :amount, :price])
   end
 
 end

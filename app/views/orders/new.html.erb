@@ -1,5 +1,5 @@
 <div class="container">
-  <div>
+  <div class="my-4">
     <h2>注文情報入力</h2>
   </div>
 
@@ -44,18 +44,14 @@
         </div>
 
         <br><h4>お届け日時</h4>
-        <div class="form-check">
-          <div>
-            <label>日付</label>
-            <%= f.date_select :delivery_day, class:"form-control" %>
-          </div>
+        <div>
+          <label>日付</label>
+          <%= f.date_field :delivery_day %>
         </div>
 
-        <div class="form-check">
-          <div>
-            <label>時刻</label>
-            <%= f.time_select :delivery_time, class:"form_control" %>
-          </div>
+        <div>
+          <label>時刻</label>
+          <%= f.time_field :delivery_time %>
         </div>
 
         <div class="text-center my-4">
