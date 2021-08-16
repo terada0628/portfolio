@@ -8,7 +8,7 @@
       <%= form_with model: @contact, url: contacts_path, method: :post, local: true do |f| %>
         <h5>種類</h5>
         <div class="form-check">
-          <%= f.radio_button :type, 0 %> <label>商品やお店についてのお問い合わせ</label><br>
+          <%= f.radio_button :type, 0, checked: true %> <label>商品やお店についてのお問い合わせ</label><br>
         </div>
         <div class="form-check">
           <%= f.radio_button :type, 1 %> <label>その他のお問い合わせ</label>
