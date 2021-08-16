@@ -9,7 +9,7 @@ Bundler.require(*Rails.groups)
 module Hareruya
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    configload_defaults 5.2
+    config.load_defaults 5.2
 
     # タイムゾーンを日本時間に設定
     config.time_zone = 'Asia/Tokyo'
