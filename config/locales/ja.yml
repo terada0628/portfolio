@@ -7,10 +7,6 @@ ja:
         c: "調理中"
         d: "配達中"
         f: "配達済み"
-    content:
-      style:
-        a: "商品やお店についてのお問い合わせ"
-        b: "その他のお問い合わせ"
   date:
     formats:
       default: "%Y/%m/%d"

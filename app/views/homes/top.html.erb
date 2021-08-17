@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row mt-4">
-    
+
     <%= render 'homes/genre', genres:@genres, favorite_item:@favorite_item %>
 
     <div class="col-12 col-lg-9">
       <div class="card">
-        <%= image_tag 'beer-kanpai.jpeg' %>
+        <%= image_tag asset_path('beer-kanpai.jpg') %>
         <div class="card-img-overlay">
           <div class="card-text-box" style="color:white;">
             <p class="card-text"><strong>いらっしゃいませ!</strong><br>
@@ -16,6 +16,6 @@
         </div>
       </div>
     </div>
-    
+
   </div>
 </div>
