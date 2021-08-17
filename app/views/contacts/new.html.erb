@@ -8,10 +8,10 @@
       <%= form_with model: @contact, url: contacts_path, method: :post, local: true do |f| %>
         <h5>種類</h5>
         <div class="form-check">
-          <%= f.radio_button :type, 0, checked: true %> <label>商品やお店についてのお問い合わせ</label><br>
+          <%= f.radio_button :inquiry, "商品・お店", checked: true %> <label>商品やお店についてのお問い合わせ</label><br>
         </div>
         <div class="form-check">
-          <%= f.radio_button :type, 1 %> <label>その他のお問い合わせ</label>
+          <%= f.radio_button :inquiry, "その他" %> <label>その他のお問い合わせ</label>
         </div>
 
         <br><h5>件名</h5>
@@ -46,8 +46,8 @@
 
           <tr>
             <td>性別</td>
-            <td><%= f.radio_button :sex, 0, checked: true %><label>男性</label></td>
-            <td><%= f.radio_button :sex, 1 %><label>女性</label> </td>
+            <td><%= f.radio_button :sex, "男性", checked: true %><label>男性</label></td>
+            <td><%= f.radio_button :sex, "女性" %><label>女性</label> </td>
           </tr>
         </table>
 

@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2021_08_09_135710) do
   create_table "contacts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "type"
+    t.string "inquiry"
     t.string "title"
     t.text "content"
     t.string "family_name"
@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 2021_08_09_135710) do
     t.string "postal_code"
     t.string "address"
     t.string "telephone_number"
-    t.integer "sex"
+    t.string "sex"
   end
 
   create_table "customers", force: :cascade do |t|

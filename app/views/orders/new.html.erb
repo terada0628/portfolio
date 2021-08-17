@@ -46,12 +46,12 @@
         <br><h4>お届け日時</h4>
         <div>
           <label>日付</label>
-          <%= f.date_field :delivery_day %>
+          <%= f.date_field :delivery_day, value:Time.now.since(2.days).strftime("%Y-%m-%d"), min: Date.tomorrow.tomorrow %>
         </div>
 
         <div>
-          <label>時刻</label>
-          <%= f.time_field :delivery_time %>
+          <label>時刻(18時~22時)</label>
+          <%= f.time_field :delivery_time, min:"18:00", max:"22:00" %>
         </div>
 
         <div class="text-center my-4">

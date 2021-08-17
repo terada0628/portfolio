@@ -3,7 +3,7 @@ class CreateContacts < ActiveRecord::Migration[5.2]
     create_table :contacts do |t|
 
       t.timestamps
-      t.integer :type
+      t.string :inquiry
       t.string :title
       t.text :content
       t.string :family_name
@@ -14,7 +14,7 @@ class CreateContacts < ActiveRecord::Migration[5.2]
       t.string :postal_code
       t.string :address
       t.string :telephone_number
-      t.integer :sex
+      t.string :sex
     end
   end
 end
