@@ -3,6 +3,7 @@ class ItemsController < ApplicationController
     @genres = Genre.all
     @favorite_item = Item.all
     @items = Item.all
+    # @favorite = Favorite.where(customer_id: current_customer.id)
   end
 
   def show
