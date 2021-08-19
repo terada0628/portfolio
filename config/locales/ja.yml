@@ -1,0 +1,17 @@
+ja:
+  enums:
+    order:
+      status:
+        a: "食材準備中"
+        b: "調理準備中"
+        c: "調理中"
+        d: "配達中"
+        f: "配達済み"
+  date:
+    formats:
+      default: "%Y/%m/%d"
+  time:
+    formats:
+      default: '%H:%M'
+
+

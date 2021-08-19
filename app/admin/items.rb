@@ -1,20 +1,39 @@
 ActiveAdmin.register Item do
-  permit_params :genre_id, :name, :image_id, :introduction, :price, :is_active
+  permit_params :genre_id, :name, :image, :introduction, :price, :is_active
 
+  form do |f|
+      f.inputs "Items" do
+        f.input :genre
+        f.input :name
+        f.attachment_field :image, :as => :file
+        # f.input :image, :as => :file
+        f.input :introduction
+        f.input :price
+      end
+      f.actions
+    end
 
-  # See permitted parameters documentation:
-  # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-  #
-  # Uncomment all parameters which should be permitted for assignment
-  #
-  # permit_params :genre_id, :name, :image_id, :introduction, :price, :is_active
-  #
-  # or
-  #
-  # permit_params do
-  #   permitted = [:genre_id, :name, :image_id, :introduction, :price, :is_active]
-  #   permitted << :other if params[:action] == 'create' && current_user.admin?
-  #   permitted
-  # end
+    index do
+      selectable_column
+      column (:genre)
+      column (:name)
+      column (:image) #do
+        # attachment_image_tag(item_image, :image)
+      # end
+      column (:introduction)
+      column (:price)
+    end
+
+    show do |item_image|
+      attributes_table do
+        row :genre
+        row :name
+        row :image do
+          attachment_image_tag(item_image, :image)
+        end
+        row :introduction
+        row :price
+      end
+    end
 
 end

@@ -1,2 +1,78 @@
-<h1>Homes#about</h1>
-<p>Find me in app/views/homes/about.html.erb</p>
+<div class="container">
+
+  <div class="my-4">
+    <h2>店舗情報</h2>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-7">
+      <div class="card">
+        <%= image_tag 'staff.jpg', class:"rounded" %>
+      </div>
+      <div class="mt-4">
+        <h4>
+          いつも、ご利用いただきありがとうございます。<br>
+          スタッフ一同、衛生管理を徹底し<br>
+          皆様に安全で美味しい料理を届けれるよう<br>
+          心よりお待ちしてます。
+        </h4>
+      </div>
+    </div>
+
+    <div class="col-7 col-lg-5 mt-4 mt-lg-0">
+      <table class="table">
+          <tr>
+            <td>名称</td>
+            <td>Hareruya</td>
+          </tr>
+          <tr>
+            <td>住所</td>
+            <td>
+              333-9999<br>
+              東京都足立区
+            </td>
+          </tr>
+          <tr>
+            <td>TEL</td>
+            <td><a href="tel:070-9505-1373">070-9505-1373</a></td>
+          </tr>
+          <tr>
+            <td>営業時間</td>
+            <td>
+              【火〜木】18:00~23:00<br>
+              【金・土】18:00~24:00<br>
+              【日・祝】18:00~22:00
+            </td>
+          </tr>
+          <tr>
+            <td>ラストオーダー</td>
+            <td>閉店時間の1時間前</td>
+          </tr>
+          <tr>
+            <td>定休日</td>
+            <td>毎週月曜日</td>
+          </tr>
+      </table>
+
+      <div id="map"></div>
+
+      <style>
+        #map{
+          height: 400px;
+          width: 450px;
+        }
+      </style>
+
+      <script>
+        function initMap(){
+          let map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+          });
+        }
+      </script>
+
+      <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['API_KEY']%>&callback=initMap" async defer></script>
+    </div>
+  </div>
+</div>

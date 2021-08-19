@@ -49,9 +49,9 @@ ActiveRecord::Schema.define(version: 2021_08_09_135710) do
   create_table "contacts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "type"
+    t.string "inquiry"
     t.string "title"
-    t.text "contect"
+    t.text "content"
     t.string "family_name"
     t.string "first_name"
     t.string "family_name_kana"
@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 2021_08_09_135710) do
     t.string "postal_code"
     t.string "address"
     t.string "telephone_number"
-    t.integer "sex"
+    t.string "sex"
   end
 
   create_table "customers", force: :cascade do |t|
@@ -102,9 +102,9 @@ ActiveRecord::Schema.define(version: 2021_08_09_135710) do
     t.datetime "updated_at", null: false
     t.integer "genre_id"
     t.string "name"
-    t.integer "image_id"
+    t.string "image_id"
     t.text "introduction"
-    t.string "price"
+    t.integer "price"
     t.boolean "is_active", default: true, null: false
   end
 
@@ -126,8 +126,9 @@ ActiveRecord::Schema.define(version: 2021_08_09_135710) do
     t.date "delivery_day"
     t.time "delivery_time"
     t.integer "shipping_cost"
-    t.integer "tatal_payment"
-    t.integer "payment_method", default: 0, null: false
+    t.integer "total_payment"
+    t.string "name"
+    t.integer "payment_method"
     t.integer "status", default: 0, null: false
   end
 

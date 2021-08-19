@@ -1,2 +1,57 @@
-<h1>Customers#show</h1>
-<p>Find me in app/views/customers/show.html.erb</p>
+<div class="container">
+
+  <div class="my-4">
+    <h2>マイページ</h2>
+
+  </div>
+
+  <div class="col-12 col-md-9 mx-auto">
+
+    <table class="table table-bordered table-hover">
+      <tr>
+        <th style="width:35%">氏名</th>
+        <td><%= current_customer.family_name %> <%= current_customer.first_name %></td>
+      </tr>
+
+      <tr>
+        <th>カナ</th>
+        <td><%= current_customer.family_name_kana %> <%= current_customer.first_name_kana %></td>
+      </tr>
+
+      <tr>
+        <th>性別</th>
+        <td><%= current_customer.sex %></td>
+      </tr>
+
+      <tr>
+        <th>郵便番号</th>
+        <td><%= current_customer.postal_code %></td>
+      </tr>
+
+      <tr>
+        <th>住所</th>
+        <td><%= current_customer.address %></td>
+      </tr>
+
+      <tr>
+        <th>電話番号</th>
+        <td><%= current_customer.telephone_number %></td>
+      </tr>
+
+      <tr>
+        <th>メールアドレス</th>
+        <td><%= current_customer.email %></td>
+      </tr>
+    </table>
+
+    <div class="d-flex justify-content-around">
+      <%= link_to "編集する", edit_customer_registration_path, class:"btn btn-primary" %>
+
+      <%= link_to "いいねした商品", customers_favorites_path, class:"btn btn-warning" %>
+
+      <%= link_to "注文履歴", orders_path, class:"btn btn-success" %>
+    </div>
+
+  </div>
+
+</div>
