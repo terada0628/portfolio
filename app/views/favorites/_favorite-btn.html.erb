@@ -1,0 +1,14 @@
+<% if item.favorited_by?(current_customer) %>
+<p>
+  <%= link_to item_favorites_path(item.id), method: :delete, remote: true do %>
+  <i class="fas fa-star"></i>いいねを外す<i class="fas fa-star"></i>
+  <% end %>
+</p>
+
+<% else %>
+<p>
+  <%= link_to item_favorites_path(item.id), method: :post, remote: true do %>
+  <i class="far fa-star"></i>いいねをする<i class="far fa-star"></i>
+  <% end %>
+</p>
+<% end %>

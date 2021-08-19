@@ -2,10 +2,10 @@ class SearchController < ApplicationController
 
   def search
     @genres = Genre.all
-    @favorite_item = Item.all
+    @all_ranks = Item.find(Favorite.group(:item_id).order('count(item_id) desc').limit(3).pluck(:item_id))
     @value = params["search"]["value"]        #データを代入
     @how = params["search"]["how"]            #検索方法を代入
-    @datas = search_for(@how, @value)         #def search_forを実行(引数に検索ワードと検索法)
+    @datas = search_for(@how, @value).page(params[:page]).per(12)         #def search_forを実行(引数に検索ワードと検索法)
   end
 
 

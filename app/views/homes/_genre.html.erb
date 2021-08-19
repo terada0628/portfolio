@@ -1,17 +1,17 @@
 <div class="col-8 off-set-4 col-lg-2 off-set-lg-1 d-flex flex-row flex-lg-column mb-3 mb-lg-0">
   <div class="genre mr-auto">
-    <strong>ジャンル検索</strong>
+    <strong class="font-italic">ジャンル検索</strong>
     <ul class="list-group">
       <% @genres.each do |genre| %>
-      <li><%= link_to genre.name, items_path(genre.items) %></li>
+      <li><%= link_to genre.name, search_search_path('search[value]': genre.id, 'search[how]': "match") %></li>
       <% end %>
     </ul>
   </div>
   <br>
   <div class="popular">
-    <strong>人気ランキング</strong>
+    <strong class="font-italic">人気ランキング</strong>
     <ol class="list-group">
-      <% @favorite_item.each do |item| %>
+      <% @all_ranks.each do |item| %>
       <li><%= link_to item.name, item_path(item) %></li>
       <% end %>
     </ol>

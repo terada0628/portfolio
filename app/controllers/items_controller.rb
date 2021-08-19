@@ -1,14 +1,13 @@
 class ItemsController < ApplicationController
   def index
     @genres = Genre.all
-    @favorite_item = Item.all
-    @items = Item.all
-    # @favorite = Favorite.where(customer_id: current_customer.id)
+    @all_ranks = Item.find(Favorite.group(:item_id).order('count(item_id) desc').limit(3).pluck(:item_id))
+    @items = Item.page(params[:page]).per(12)
   end
 
   def show
     @genres = Genre.all
-    @favorite_item = Item.all
+    @all_ranks = Item.find(Favorite.group(:item_id).order('count(item_id) desc').limit(3).pluck(:item_id))
 
     @item = Item.find(params[:id])
     @cart_item = CartItem.new

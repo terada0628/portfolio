@@ -5,10 +5,16 @@ class ContactsController < ApplicationController
   end
 
   def create
+    
     @contact = Contact.new(contact_params)
-    @contact.save
-    redirect_to contacts_complete_path
+    if @contact.save
+      redirect_to contacts_complete_path
+    else
+      render :new
+    end
+    
   end
+  
 
   def complete
   end

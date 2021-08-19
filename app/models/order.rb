@@ -8,6 +8,10 @@ class Order < ApplicationRecord
 
   has_many :order_details, dependent: :destroy
 
+  validates :postal_code, presence: true
+  validates :address, presence: true
+  validates :name, presence: true
+
   def total_price
     array =[]
     self.order_details.each do |order_detail|

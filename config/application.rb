@@ -13,6 +13,7 @@ module Hareruya
 
     # タイムゾーンを日本時間に設定
     config.time_zone = 'Asia/Tokyo'
+    config.active_record.default_timezone = :local
 
     # デフォルトのロケールを日本(ja)に変更
     config.i18n.default_locale = :ja

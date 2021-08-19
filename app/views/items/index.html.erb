@@ -3,24 +3,9 @@
     <h2>商品一覧</h2>
   </div>
   <div class="row">
-
-    <div class="col-3 col-lg-2">
-      <div class="genre">
-        <br><br><strong>ジャンル検索</strong>
-        <ul class="list-group">
-          <% @genres.each do |genre| %>
-          <li><%= link_to genre.name, search_search_path('search[value]': genre.id, 'search[how]': "match") %></li>
-          <% end %>
-        </ul>
-      </div>
-      <br>
-      <div class="popular">
-        <strong>人気ランキング</strong>
-        <ol class="list-group">
-          <% @favorite_item.each do |item| %>
-          <li><%= link_to item.name, item_path(item) %></li>
-          <% end %>
-        </ol>
+    
+    <!--ジャンル・ランキング-->
+    <%= render 'items/sidebar', genres:@genres, all_ranks:@all_ranks %>
 
     <div class="col-9 col-lg-10 d-flex flex-wrap">
 
@@ -32,6 +17,7 @@
           <% end %>
         </div>
       <% end %>
+      <div class=" col-4 mx-auto"><%= paginate @items %></div>
 
     </div>
   </div>
