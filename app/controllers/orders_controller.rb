@@ -57,8 +57,9 @@ class OrdersController < ApplicationController
         order_detail.amount = cart_item.amount
         order_detail.save
         cart_item.destroy
-        render :complete
       end
+      render :complete
+
     else
       @customer = current_customer
       render :new

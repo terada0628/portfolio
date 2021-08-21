@@ -21,6 +21,10 @@ module Hareruya
     # assetsより外のvendorから読み込む命令
     config.assets.paths << config.root.join("vendor/assets/javascripts")
     config.assets.paths << config.root.join("vendor/assets/stylesheets")
+    
+    
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.yml').to_s]
+
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
