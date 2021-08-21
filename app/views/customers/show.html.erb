@@ -7,9 +7,9 @@
 
   <div class="col-12 col-md-9 mx-auto">
 
-    <table class="table table-bordered">
+    <table class="table table-bordered table-hover">
       <tr>
-        <th>氏名</th>
+        <th style="width:35%">氏名</th>
         <td><%= current_customer.family_name %> <%= current_customer.first_name %></td>
       </tr>
 
@@ -46,6 +46,8 @@
 
     <div class="d-flex justify-content-around">
       <%= link_to "編集する", edit_customer_registration_path, class:"btn btn-primary" %>
+
+      <%= link_to "いいねした商品", customers_favorites_path, class:"btn btn-warning" %>
 
       <%= link_to "注文履歴", orders_path, class:"btn btn-success" %>
     </div>

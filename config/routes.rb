@@ -9,12 +9,13 @@ Rails.application.routes.draw do
   devise_for :customers
 
   resources :items, only: [:index, :show] do
-    resources :favorites, only: [:create, :destroy]
+    resource :favorites, only: [:create, :destroy]
   end
 
   get 'customers/my_page' => 'customers#show'
   get 'customers/unsubscribe' => 'customers#unsubscribe', as: 'unsubscribe'
   patch 'customers/withdraw' => 'customers#withdraw', as: 'withdraw'
+  get 'customers/favorites' => 'customers#favorites'
 
   delete 'cart_items/all_destroy' => 'cart_items#all_destroy', as: 'all_destroy'
   resources :cart_items, only:[:index, :update, :destroy, :create]

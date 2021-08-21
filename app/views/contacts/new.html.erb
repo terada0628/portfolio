@@ -1,6 +1,16 @@
 <div class="container">
   <div class="my-4">
     <h2>お問い合わせフォーム</h2>
+    <div class="text-danger">
+      <% if @contact.errors.any? %>
+        <h4>入力した値にエラーがありました</h4>
+        <ul>
+          <% @contact.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      <% end %>
+    </div>
   </div>
 
   <div class="row">
@@ -24,7 +34,7 @@
           <%= f.text_area :content, class:"form-control" %>
         </div>
 
-        <br><h4>お客様情報</h4>
+        <br><h5>お客様情報</h5>
         <table class="table table-borderless mt-3">
           <tr>
             <td></td>
@@ -54,7 +64,7 @@
         <table class="table table-borderless">
           <tr>
             <td>メールアドレス</td>
-            <td><%= f.text_field :email, class:"form-control" %></td>
+            <td><%= f.email_field :email, class:"form-control" %></td>
           </tr>
 
           <tr>

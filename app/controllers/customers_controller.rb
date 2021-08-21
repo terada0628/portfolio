@@ -25,6 +25,12 @@ class CustomersController < ApplicationController
     redirect_to root_path
   end
 
+  def favorites
+    @favorites = Favorite.where(customer_id: current_customer.id).reverse_order
+    @genres = Genre.all
+    @all_ranks = Item.find(Favorite.group(:item_id).order('count(item_id) desc').limit(3).pluck(:item_id))
+  end
+
   private
   def customer_params
     params.require(:customer).permit(:family_name, :first_name, :family_name_kana, :first_name_kana, :sex, :postal_codel, :address, :telephone_number, :is_deleted, :email, :created_at, :updated_at)

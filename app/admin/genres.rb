@@ -1,6 +1,16 @@
 ActiveAdmin.register Genre do
   permit_params :name
 
+  menu label: "ジャンル"
+
+  index do |f|
+    selectable_column
+    column(:name)
+    actions
+  end
+
+
+
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #

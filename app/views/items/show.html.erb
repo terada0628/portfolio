@@ -1,56 +1,34 @@
 <div class="container">
-  <div class="row my-4">
+  <div class="my-4">
+    <h2><%= @item.name %></h2>
+  </div>
+  <div class="row">
 
-    <div class="col-4 col-md-3 col-lg-2">
-      <div class="genre ml-1">
-        <br><br><strong>ジャンル検索</strong>
-        <ul class="list-group">
-          <% @genres.each do |genre| %>
-          <li><%= link_to genre.name, items_path(genre.items) %></li>
-          <% end %>
-        </ul>
-      </div>
-      <br>
-      <div class="popular ml-1">
-        <strong>人気ランキング</strong>
-        <ol class="list-group">
-          <% @favorite_item.each do |item| %>
-          <li><%= link_to item.name, item_path(item) %></li>
-          <% end %>
-        </ol>
-      </div>
-    </div>
-
+    <!--ジャンル・ランキング-->
+    <%= render 'items/sidebar', genres:@genres, all_ranks:@all_ranks %>
 
     <div class="col-8 ml-md-3 ml-lg-5">
-      <%= attachment_image_tag @item, :image, size: '300x200', format:'jpeg' %>
-      <h2><%= @item.name %></h2><br>
-      <p>
-        <%= @item.introduction %><br>
-        ¥<%= @item.price %>
-      </p>
+      <%= attachment_image_tag @item, :image, :width => '100%', :height => '60%', format:'jpeg', class:"border" %>
+      <h4>
+        <br><%= @item.introduction %><br></h4>
+        <p>¥<%= @item.price %></p>
 
       <% if customer_signed_in? %>
-      <!--いいね機能-->
-        <% if @item.favorited_by?(current_customer) %>
-        <p>
-          <%= link_to item_favorite_path(@item), method: :delete do %>
-          <i class="fas fa-star"></i>いいねを外す<i class="fas fa-star"></i>
-          <% end %>
-        </p>
 
-        <% else %>
-        <p>
-          <%= link_to item_favorites_path(@item), method: :post do %>
-          <i class="far fa-star"></i>いいねをする<i class="far fa-star"></i>
+        <!--いいね機能-->
+        <div id="favorite-btn_<%= @item.id %>">
+          <%= render partial: 'favorites/favorite-btn', locals: {item: @item} %>
+        </div>
+
+        <!--カートに入れるフォーム-->
+        <% if @cart_item.errors.any? %>
+          <%= @cart_item.errors.full_messages.each do |message| %>
+            <%= message %>
           <% end %>
-        </p>
         <% end %>
-
-      <!--カートに入れるフォーム-->
         <%= form_with(model:@cart_item, url:cart_items_path, method: :post, local: true) do |f| %>
           <%= f.hidden_field :item_id, value: @item.id %>
-          <%= f.select :amount, options_for_select((1..20).to_a), include_blank: '個数選択' %>
+          <label>個数選択</label> <%= f.select :amount, options_for_select((1..20).to_a) %>
           <%= f.submit "カートに入れる", class: "btn btn-success" %>
         <% end %>
 

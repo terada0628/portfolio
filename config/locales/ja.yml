@@ -6,12 +6,41 @@ ja:
         b: "調理準備中"
         c: "調理中"
         d: "配達中"
-        f: "配達済み"
+        e: "配達済み"
   date:
     formats:
       default: "%Y/%m/%d"
   time:
     formats:
       default: '%H:%M'
+  activerecord:
+    attributes:
+      contact:
+        email: "メールアドレス"
+        family_name: "氏名(姓)"
+        first_name: "氏名(名)"
+        family_name_kana: "姓(カナ)"
+        first_name_kana: "名(カナ)"
+        postal_code: "郵便番号"
+        address: "住所"
+        telephone_number: "電話番号"
+        sex: "性別"
+      customer:
+        email: "メールアドレス"
+        family_name: "氏名(姓)"
+        first_name: "氏名(名)"
+        family_name_kana: "姓(カナ)"
+        first_name_kana: "名(カナ)"
+        postal_code: "郵便番号"
+        address: "住所"
+        telephone_number: "電話番号"
+        sex: "性別"
+        password: "パスワード"
+      order:
+        postal_code: "郵便番号"
+        address: "住所"
+        name: "宛名"
+
+
 
 
