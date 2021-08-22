@@ -21,10 +21,18 @@ module Hareruya
     # assetsより外のvendorから読み込む命令
     config.assets.paths << config.root.join("vendor/assets/javascripts")
     config.assets.paths << config.root.join("vendor/assets/stylesheets")
-    
-    
+
+    # 日本語化
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.yml').to_s]
 
+    # RSpecの生成ファイルの設定(falseは不要なテストファイル)
+    config.generators do |g|
+      g.test_framework :rspec,
+            view_specs: false,
+            helper_specs: false,
+            controller_specs: false,
+            routing_specs: false
+    end
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
