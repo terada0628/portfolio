@@ -60,6 +60,12 @@
   </header>
 
   <main>
+    <div class="ml-5 mt-3">
+      <% flash.each do |key, value| %>
+        <h4 class="text-danger"><%= content_tag(:div, value, class: "#{key}") %></h4>
+      <% end %>
+    </div>
+
     <%= yield %>
   </main>
 
