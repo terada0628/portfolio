@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :contact do
-    inquiry                {"商品やお店についてのお問い合わせ"}
+    inquiry               {"商品やお店についてのお問い合わせ"}
     title                 {"8/15の19時に届いた商品について"}
     content               {"焼きおにぎりを6個注文したのだが、5個しか入ってなかった"}
     email                 {"test@gmail.com"}

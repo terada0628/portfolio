@@ -58,7 +58,7 @@ RSpec.describe Customer, type: :model do
     end
 
     it '郵便番号が数字以外では登録できない' do
-      @customer.postal_code = "いいいいいいい"
+      @customer.postal_code = "郵便番号を忘れました"
       @customer.valid?
       expect(@customer.errors.full_messages).to include("郵便番号は数値で入力してください")
     end
@@ -82,7 +82,7 @@ RSpec.describe Customer, type: :model do
     end
 
     it '電話番号は数字以外で登録できない' do
-      @customer.telephone_number = "あああああ"
+      @customer.telephone_number = "電話番号を忘れました"
       @customer.valid?
       expect(@customer.errors.full_messages).to include("電話番号は数値で入力してください")
     end
