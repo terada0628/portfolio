@@ -60,9 +60,10 @@
   </header>
 
   <main>
+    <!--フラッシュメッセージの表示-->
     <div class="ml-5 mt-3">
       <% flash.each do |key, value| %>
-        <h4 class="text-danger"><%= content_tag(:div, value, class: "#{key}") %></h4>
+        <h4 class="text-success"><%= content_tag(:div, value, class: "#{key}") %></h4>
       <% end %>
     </div>
 
