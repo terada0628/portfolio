@@ -11,19 +11,19 @@ class CartItemsController < ApplicationController
   def update
     @cart_item = CartItem.find(params[:id])
     @cart_item.update(amount: params[:amount].to_i)
-    redirect_to cart_items_path
+    redirect_to cart_items_path, notice: '数量を変更しました'
   end
 
   def destroy
     cart_item = CartItem.find(params[:id])
     cart_item.destroy
-    redirect_to cart_items_path
+    redirect_to cart_items_path, notice: '商品を削除しました'
   end
 
   def all_destroy
     cart_items = current_customer.cart_items.all
     cart_items.destroy_all
-    redirect_to cart_items_path
+    redirect_to cart_items_path, notice: 'カートを空にしました'
   end
 
   def create
@@ -42,7 +42,7 @@ class CartItemsController < ApplicationController
     end
 
     @cart_item.save
-    redirect_to cart_items_path
+    redirect_to cart_items_path, notice: 'カートに入れました'
 
   end
 
