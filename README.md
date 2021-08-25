@@ -70,3 +70,4 @@ UberEatsや出前館といったフードデリバリーサービスが展開さ
 ## 動作画像
 
 ![スクリーンショット 2021-08-25 11 59 42](https://user-images.githubusercontent.com/84890597/130719518-a832e0f6-4911-4521-9973-927b20243c02.png)
+<div style="width:100%;height:0;padding-bottom:88%;position:relative;"><iframe src="https://giphy.com/embed/2igqbUBaKjbKIJa402" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/2igqbUBaKjbKIJa402">via GIPHY</a></p>
