@@ -47,6 +47,16 @@ UberEatsや出前館といったフードデリバリーサービスが展開さ
 - 贅沢をしたいとき
 
 ### 設計書
+
+|設計書|URL|
+|:----|:----|
+|ワイヤーフレーム|https://docs.google.com/presentation/d/1Gvn5-ZnUTLuJlWgZqYFzcUOv1DL5NmNw-mjoNT-0o_E/edit?usp=sharing|
+|ER図|https://drive.google.com/file/d/1DdbdoihDOD-hE3Lhl9oQyQeXz1fI6WQj/view?usp=sharing|
+|フレームワーク|Ruby on Rails|
+|JSライブラリ|jQuery|
+|IDE|Cloud9||
+
+
 |設計書| |URL|
 |:----|:----|
 |ワイヤーフレーム|https://docs.google.com/presentation/d/1Gvn5-ZnUTLuJlWgZqYFzcUOv1DL5NmNw-mjoNT-0o_E/edit?usp=sharing|
@@ -56,13 +66,6 @@ UberEatsや出前館といったフードデリバリーサービスが展開さ
 <https://docs.google.com/spreadsheets/d/1qQZAS1NnTR8KiMhutV0pwhXXS91J_YSqai3LQWOSmek/edit#gid=0>
 
 ### ◆開発環境
-|項目| |
-|:----|:----|
-|OS|macOS Big Sur 11.5|
-|言語|HTML,CSS,JavaScript,Ruby,SQL|
-|フレームワーク|Ruby on Rails|
-|JSライブラリ|jQuery|
-|IDE|Cloud9||
 
 ## 動作画像
 
