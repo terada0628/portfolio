@@ -47,8 +47,6 @@ UberEatsや出前館といったフードデリバリーサービスが展開さ
 - 贅沢をしたいとき
 
 ### 設計書
-
-
 [ワイヤーフレーム](https://docs.google.com/presentation/d/1Gvn5-ZnUTLuJlWgZqYFzcUOv1DL5NmNw-mjoNT-0o_E/edit?usp=sharing)  
 [ER図](https://drive.google.com/file/d/1DdbdoihDOD-hE3Lhl9oQyQeXz1fI6WQj/view?usp=sharing)  
 [テーブル定義書](https://docs.google.com/spreadsheets/d/1wJoCL5v5NUy8w8-taOCsEPqTVeD1AjoR_d6w4cLEPoI/edit?usp=sharing)  
@@ -66,5 +64,5 @@ UberEatsや出前館といったフードデリバリーサービスが展開さ
 |JSライブラリ|jQuery|
 |IDE|Cloud9||
 
-## 動作画像
+## 動作デモ
 https://user-images.githubusercontent.com/84890597/130739949-3ac19140-cf47-478f-81d1-c650a3f4db55.mp4
