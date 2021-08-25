@@ -6,8 +6,6 @@ ActiveAdmin.register Order do
 
   filter :delivery_day, label: "配達日", as: :date_range
 
-  filter :status, as: :check_boxes, collection: Order.statuses_i18n.invert
-
 
   form do |f|
     f.inputs do
