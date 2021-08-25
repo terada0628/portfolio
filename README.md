@@ -49,10 +49,10 @@ UberEatsや出前館といったフードデリバリーサービスが展開さ
 ### 設計書
 
 
-[ワイヤーフレーム](https://docs.google.com/presentation/d/1Gvn5-ZnUTLuJlWgZqYFzcUOv1DL5NmNw-mjoNT-0o_E/edit?usp=sharing)␣␣
-[ER図](https://drive.google.com/file/d/1DdbdoihDOD-hE3Lhl9oQyQeXz1fI6WQj/view?usp=sharing)␣␣
-[テーブル定義書](https://docs.google.com/spreadsheets/d/1wJoCL5v5NUy8w8-taOCsEPqTVeD1AjoR_d6w4cLEPoI/edit?usp=sharing)␣␣
-[アプリケーション詳細設計](https://docs.google.com/spreadsheets/d/1jjsu9M9bQTVGUdmGr63Vau1-EkBs0RHfVih42VboHCU/edit?usp=sharing)␣␣
+[ワイヤーフレーム](https://docs.google.com/presentation/d/1Gvn5-ZnUTLuJlWgZqYFzcUOv1DL5NmNw-mjoNT-0o_E/edit?usp=sharing)  
+[ER図](https://drive.google.com/file/d/1DdbdoihDOD-hE3Lhl9oQyQeXz1fI6WQj/view?usp=sharing)  
+[テーブル定義書](https://docs.google.com/spreadsheets/d/1wJoCL5v5NUy8w8-taOCsEPqTVeD1AjoR_d6w4cLEPoI/edit?usp=sharing)  
+[アプリケーション詳細設計](https://docs.google.com/spreadsheets/d/1jjsu9M9bQTVGUdmGr63Vau1-EkBs0RHfVih42VboHCU/edit?usp=sharing)
 
 ## チャレンジ要素一覧
 <https://docs.google.com/spreadsheets/d/1qQZAS1NnTR8KiMhutV0pwhXXS91J_YSqai3LQWOSmek/edit#gid=0>
