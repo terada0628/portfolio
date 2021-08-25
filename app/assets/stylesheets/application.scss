@@ -40,7 +40,7 @@ header {
 
 @font-face {
   font-family: 'free';
-  src: asset_url('/assets/hanazome.ttf') format('truetype');
+  src: asset_url('hanazome.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -53,3 +53,17 @@ h4 {
   font-family: 'free';
 }
 
+.item {
+  text-decoration: none;
+  color: #FF8C00;
+}
+
+.side {
+  text-decoration: none;
+  color: yellow;
+  text-shadow:
+  1px 0 0 black,
+    0 1px 0 black,
+    -1px 0 0 black,
+    0 -1px 0 black,
+}

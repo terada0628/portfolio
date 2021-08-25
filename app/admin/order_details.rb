@@ -1,18 +1,19 @@
 ActiveAdmin.register OrderDetail do
 
-  # See permitted parameters documentation:
-  # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-  #
-  # Uncomment all parameters which should be permitted for assignment
-  #
-  # permit_params :item_id, :order_id, :amount, :price
-  #
-  # or
-  #
-  # permit_params do
-  #   permitted = [:item_id, :order_id, :amount, :price]
-  #   permitted << :other if params[:action] == 'create' && current_user.admin?
-  #   permitted
-  # end
-  
+  menu label: "注文商品"
+
+  index do |f|
+    selectable_column
+    column(:order_id)
+    # column(:item_id)
+    column "Item", sortable: :item_id do |order_detail|
+      order_detail.item.name
+    end
+    column(:amount)
+    column(:price)
+    actions
+  end
+
+
+
 end

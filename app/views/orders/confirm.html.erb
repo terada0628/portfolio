@@ -22,7 +22,7 @@
            <td>
             <div class="d-flex">
               <div>
-                <%= attachment_image_tag cart_item.item, :image, format:'jpeg', size:'150x100', class:"mr-2" %>
+                <%= attachment_image_tag cart_item.item, :image, format:'jpeg', size:'150x100', class:"mr-2 border" %>
               </div>
               <div>
                 <%= cart_item.item.name %><br>¥<%= cart_item.item.price.to_i.round %>

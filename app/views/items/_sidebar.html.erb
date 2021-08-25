@@ -1,6 +1,6 @@
 <div class="col-3 col-lg-2">
   <div class="genre">
-    <br><br><strong class="font-italic">ジャンル検索</strong>
+    <br><br><strong class="font-italic side">ジャンル検索</strong>
     <ul class="list-group">
       <% genres.each do |genre| %>
       <li><%= link_to genre.name, search_search_path('search[value]': genre.id, 'search[how]': "match") %></li>
@@ -9,7 +9,7 @@
   </div>
   <br>
   <div class="popular">
-    <strong class="font-italic">人気ランキング</strong>
+    <strong class="font-italic side">人気ランキング</strong>
     <ol class="list-group">
       <% all_ranks.each do |item| %>
       <li><%= link_to item.name, item_path(item) %></li>
