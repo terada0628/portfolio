@@ -46,7 +46,7 @@ UberEatsや出前館といったフードデリバリーサービスが展開さ
 - お祝いや記念日のとき
 - 贅沢をしたいとき
 
-## 設計書
+### 設計書
 |設計書| |URL|
 |:----|:----|
 |ワイヤーフレーム|https://docs.google.com/presentation/d/1Gvn5-ZnUTLuJlWgZqYFzcUOv1DL5NmNw-mjoNT-0o_E/edit?usp=sharing|
