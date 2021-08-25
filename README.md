@@ -60,3 +60,5 @@ UberEatsや出前館といったフードデリバリーサービスが展開さ
 |フレームワーク|Ruby on Rails|
 |JSライブラリ|jQuery|
 |IDE|Cloud9||
+
+https://github.com/terada0628/portfolio/issues/19#issue-978657729
