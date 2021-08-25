@@ -48,12 +48,11 @@ UberEatsや出前館といったフードデリバリーサービスが展開さ
 
 ### 設計書
 
-|設計書|URL|
-|:----|:----|
-|ワイヤーフレーム|https://docs.google.com/presentation/d/1Gvn5-ZnUTLuJlWgZqYFzcUOv1DL5NmNw-mjoNT-0o_E/edit?usp=sharing|
-|ER図|https://drive.google.com/file/d/1DdbdoihDOD-hE3Lhl9oQyQeXz1fI6WQj/view?usp=sharing|
-|テーブル定義書|https://docs.google.com/spreadsheets/d/1wJoCL5v5NUy8w8-taOCsEPqTVeD1AjoR_d6w4cLEPoI/edit?usp=sharing|
-|アプリケーション詳細設計|https://docs.google.com/spreadsheets/d/1jjsu9M9bQTVGUdmGr63Vau1-EkBs0RHfVih42VboHCU/edit?usp=sharing||
+
+[ワイヤーフレーム](https://docs.google.com/presentation/d/1Gvn5-ZnUTLuJlWgZqYFzcUOv1DL5NmNw-mjoNT-0o_E/edit?usp=sharing)
+[ER図](https://drive.google.com/file/d/1DdbdoihDOD-hE3Lhl9oQyQeXz1fI6WQj/view?usp=sharing)
+[テーブル定義書](https://docs.google.com/spreadsheets/d/1wJoCL5v5NUy8w8-taOCsEPqTVeD1AjoR_d6w4cLEPoI/edit?usp=sharing)
+[アプリケーション詳細設計](https://docs.google.com/spreadsheets/d/1jjsu9M9bQTVGUdmGr63Vau1-EkBs0RHfVih42VboHCU/edit?usp=sharing)
 
 ## チャレンジ要素一覧
 <https://docs.google.com/spreadsheets/d/1qQZAS1NnTR8KiMhutV0pwhXXS91J_YSqai3LQWOSmek/edit#gid=0>
@@ -69,5 +68,3 @@ UberEatsや出前館といったフードデリバリーサービスが展開さ
 
 ## 動作画像
 
-![スクリーンショット 2021-08-25 11 59 42](https://user-images.githubusercontent.com/84890597/130719518-a832e0f6-4911-4521-9973-927b20243c02.png)
-<div style="width:100%;height:0;padding-bottom:88%;position:relative;"><iframe src="https://giphy.com/embed/2igqbUBaKjbKIJa402" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/2igqbUBaKjbKIJa402">via GIPHY</a></p>
