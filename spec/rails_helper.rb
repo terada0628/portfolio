@@ -3,7 +3,7 @@ require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../config/environment', __dir__)
 # Prevent database truncation if the environment is production
-abort("The Rails environment is running in production mode!") if Rails.env.production?
+abort('The Rails environment is running in production mode!') if Rails.env.production?
 require 'rspec/rails'
 require 'devise'
 
@@ -24,16 +24,14 @@ require 'devise'
 # directory. Alternatively, in the individual `*_spec.rb` files, manually
 # require only the support files necessary.
 #
- Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }
+Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }
 # require Fire.expand_path("spec/support/controller_macros.rb")
 
-
 # 26行目のコード移行に記述しないと読み込まない↓↓↓
-  RSpec.configure do |config|
-    config.include ControllerMacros # 追記
-  end
-  require_relative 'support/controller_macros'
-
+RSpec.configure do |config|
+  config.include ControllerMacros # 追記
+end
+require_relative 'support/controller_macros'
 
 # Checks for pending migrations and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove these lines.
@@ -45,7 +43,6 @@ rescue ActiveRecord::PendingMigrationError => e
 end
 
 RSpec.configure do |config|
-
   # ログインヘルパーの準備
   # config.include Devise::Test::IntegrationHelpers, type: :request #sign_inヘルパーを提供してくれます
   # config.include FactoryBot::Syntax::Methods #ついでにFactoryBotもincludeしておきます
@@ -54,7 +51,7 @@ RSpec.configure do |config|
 
   config.include Devise::Test::ControllerHelpers, type: :controller
   config.include Devise::Test::IntegrationHelpers, type: :request
-  config.extend ControllerMacros, :type => :controller
+  config.extend ControllerMacros, type: :controller
 
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 

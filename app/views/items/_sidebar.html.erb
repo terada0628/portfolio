@@ -3,7 +3,7 @@
     <br><br><strong class="font-italic side">ジャンル検索</strong>
     <ul class="list-group">
       <% genres.each do |genre| %>
-      <li><%= link_to genre.name, search_search_path('search[value]': genre.id, 'search[how]': "match") %></li>
+      <li class="item"><%= link_to genre.name, search_search_path('search[value]': genre.id, 'search[how]': "match") %></li>
       <% end %>
     </ul>
   </div>
@@ -12,7 +12,7 @@
     <strong class="font-italic side">人気ランキング</strong>
     <ol class="list-group">
       <% all_ranks.each do |item| %>
-      <li><%= link_to item.name, item_path(item) %></li>
+      <li class="item"><%= link_to item.name, item_path(item) %></li>
       <% end %>
     </ol>
   </div>
