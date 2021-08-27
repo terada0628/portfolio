@@ -1,10 +1,9 @@
 ActiveAdmin.register Contact do
+  menu label: 'お問い合わせ'
 
-  menu label: "お問い合わせ"
+  filter :created_at, label: 'お問い合わせ日', as: :date_range
 
-  filter :created_at, label: "お問い合わせ日", as: :date_range
-
-  index do |f|
+  index do |_f|
     selectable_column
     column(:created_at)
     column(:inquiry)
@@ -21,7 +20,6 @@ ActiveAdmin.register Contact do
     column(:telephone_number)
     actions
   end
-
 
   # filter :created_time_gteq, label: "作成時刻（最小）", as: :select, collection: created_times
   # filter :created_time_lteq, label: "作成時刻（最大）", as: :select, collection: created_times
@@ -40,5 +38,4 @@ ActiveAdmin.register Contact do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-
 end

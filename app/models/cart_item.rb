@@ -5,7 +5,6 @@ class CartItem < ApplicationRecord
   validates :amount, presence: true
 
   def sub_total_price
-    (self.item.price * self.amount)
+    (item.price * amount)
   end
-
 end

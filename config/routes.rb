@@ -5,11 +5,11 @@ Rails.application.routes.draw do
   root 'homes#top'
   get 'homes/about' => 'homes#about', as: 'about'
 
-  resource :customers, only: [:edit, :update]
+  resource :customers, only: %i[edit update]
   devise_for :customers
 
-  resources :items, only: [:index, :show] do
-    resource :favorites, only: [:create, :destroy]
+  resources :items, only: %i[index show] do
+    resource :favorites, only: %i[create destroy]
   end
 
   get 'customers/my_page' => 'customers#show'
@@ -18,14 +18,12 @@ Rails.application.routes.draw do
   get 'customers/favorites' => 'customers#favorites'
 
   delete 'cart_items/all_destroy' => 'cart_items#all_destroy', as: 'all_destroy'
-  resources :cart_items, only:[:index, :update, :destroy, :create]
+  resources :cart_items, only: %i[index update destroy create]
 
-  resources :orders, only:[:new, :create, :index, :show]
+  resources :orders, only: %i[new create index show]
   post 'orders/confirm' => 'orders#confirm', as: 'confirm'
   get 'orders/complete' => 'orders#complete'
 
-  resources :contacts, only:[:new, :create]
+  resources :contacts, only: %i[new create]
   get 'contacts/complete' => 'contacts#complete'
-
-
 end
