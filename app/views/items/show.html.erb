@@ -9,9 +9,8 @@
 
     <div class="col-8 ml-md-3 ml-lg-5">
       <%= attachment_image_tag @item, :image, :width => '100%', :height => '60%', format:'jpeg', class:"border" %>
-      <h4>
-        <br><%= @item.introduction %><br></h4>
-        <p>¥<%= @item.price %></p>
+      <h4><br><%= @item.introduction %></h4>
+      <h2 class="text-right mr-5">￥<%= @item.price %></h2>
 
       <% if customer_signed_in? %>
 

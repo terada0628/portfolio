@@ -1,9 +1,10 @@
 ActiveAdmin.register Customer do
-  permit_params :email, :family_name, :first_name, :family_name_kana, :first_name_kana, :postal_code, :address, :telephone_number, :sex, :is_deleted, :created_at, :updated_at
+  permit_params :email, :family_name, :first_name, :family_name_kana, :first_name_kana, :postal_code, :address,
+                :telephone_number, :sex, :is_deleted, :created_at, :updated_at
 
-  menu label: "顧客情報"
+  menu label: '顧客情報'
 
-  index do |f|
+  index do |_f|
     selectable_column
     column(:email)
     column(:family_name)
@@ -17,7 +18,6 @@ ActiveAdmin.register Customer do
     column(:is_deleted)
     actions
   end
-
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
@@ -33,5 +33,4 @@ ActiveAdmin.register Customer do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-
 end

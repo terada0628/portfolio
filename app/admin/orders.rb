@@ -1,11 +1,9 @@
 ActiveAdmin.register Order do
-
   permit_params :postal_code, :address, :delivery_day, :delivery_time, :total_payment, :name, :payment_method, :status
 
-  menu label: "注文履歴"
+  menu label: '注文履歴'
 
-  filter :delivery_day, label: "配達日", as: :date_range
-
+  filter :delivery_day, label: '配達日', as: :date_range
 
   form do |f|
     f.inputs do
@@ -21,8 +19,7 @@ ActiveAdmin.register Order do
     end
   end
 
-
-  index do |f|
+  index do |_f|
     selectable_column
     column(:name)
     column(:customer_id)
@@ -38,33 +35,31 @@ ActiveAdmin.register Order do
     actions
   end
 
-  show do |f|
+  show do |_f|
     attributes_table do
-    row(:customer_id)
-    row(:postal_code)
-    row(:address)
-    row(:delivery_day)
-    row(:delivery_time)
-    row(:total_payment)
-    row(:name)
-    row(:payment_method)
-    row(:status) do |order|
-      order.status_i18n
-    end
+      row(:customer_id)
+      row(:postal_code)
+      row(:address)
+      row(:delivery_day)
+      row(:delivery_time)
+      row(:total_payment)
+      row(:name)
+      row(:payment_method)
+      row(:status) do |order|
+        order.status_i18n
+      end
 
-    #注文商品の名前と数量を表示
-    row :order_details do
-      order.order_details.collect { |n|
-      "【名前:#{n.item.name}, 数量:#{n.amount}】"
-      }.join(', ')
-    end
-    # order.order_details.each do |order_detail|
-    #   # binding.pry
-    #   row(:amount)
-    #   # row(:order_detail.item.name)
-    # end
+      # 注文商品の名前と数量を表示
+      row :order_details do
+        order.order_details.collect do |n|
+          "【名前:#{n.item.name}, 数量:#{n.amount}】"
+        end.join(', ')
+      end
+      # order.order_details.each do |order_detail|
+      #   # binding.pry
+      #   row(:amount)
+      #   # row(:order_detail.item.name)
+      # end
     end
   end
-
-
 end
