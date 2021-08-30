@@ -7,8 +7,8 @@ ActiveAdmin.register Item do
     f.inputs 'Items' do
       f.input :genre
       f.input :name
-      f.attachment_field :image => {:style => 'width:50%' }, as: :file
-      # f.input :image, :as => :file
+      # f.attachment_field :image => {:style => 'width:50%' }, as: :file
+      f.input :image, :as => :file
       f.input :introduction
       f.input :price
     end
