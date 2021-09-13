@@ -66,3 +66,6 @@ UberEatsや出前館といったフードデリバリーサービスが展開さ
 
 ## 動作デモ
 https://user-images.githubusercontent.com/84890597/130739949-3ac19140-cf47-478f-81d1-c650a3f4db55.mp4
+
+## AWS構成図
+![AWS構成図 drawio](https://user-images.githubusercontent.com/84890597/133010562-6c638f9b-e22b-48d8-9b9d-5c09ffe3b754.png)
