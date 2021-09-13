@@ -46,7 +46,7 @@ UberEatsや出前館といったフードデリバリーサービスが展開さ
 - 忙しくて料理の準備ができないとき
 - 料理が面倒なとき
 - お祝いや記念日のとき
-- 贅沢をしたいとき
+- 自分にご褒美をあげて贅沢をしたいとき
 
 ### 設計書
 [ワイヤーフレーム](https://docs.google.com/presentation/d/1Gvn5-ZnUTLuJlWgZqYFzcUOv1DL5NmNw-mjoNT-0o_E/edit?usp=sharing)  
