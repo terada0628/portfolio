@@ -1,4 +1,5 @@
 # Hareruya
+https://user-images.githubusercontent.com/84890597/130739949-3ac19140-cf47-478f-81d1-c650a3f4db55.mp4
 
 ## サイト概要
 外出自粛によりお酒を飲みに行くことが減った人たちに、おうちで居酒屋気分を味わってもらうことを目指しています。
@@ -63,9 +64,6 @@ UberEatsや出前館といったフードデリバリーサービスが展開さ
 |フレームワーク|Ruby on Rails|
 |JSライブラリ|jQuery|
 |IDE|Cloud9||
-
-## 動作デモ
-https://user-images.githubusercontent.com/84890597/130739949-3ac19140-cf47-478f-81d1-c650a3f4db55.mp4
 
 ## AWS構成図
 ![AWS構成図 drawio](https://user-images.githubusercontent.com/84890597/133010562-6c638f9b-e22b-48d8-9b9d-5c09ffe3b754.png)
