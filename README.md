@@ -28,6 +28,7 @@ https://user-images.githubusercontent.com/84890597/130739949-3ac19140-cf47-478f-
 - 注文ステータスが編集できます。
 - お問い合わせ一覧を閲覧することができます。
 
+<br>
 ## サイトテーマ
 サイト自体が個人で営業をしている居酒屋1店舗をイメージしたデリバリーサービスです。
 
@@ -65,5 +66,6 @@ UberEatsや出前館といったフードデリバリーサービスが展開さ
 |JSライブラリ|jQuery|
 |IDE|Cloud9||
 
+<br>
 ## AWS構成図
 ![AWS構成図 drawio](https://user-images.githubusercontent.com/84890597/133010562-6c638f9b-e22b-48d8-9b9d-5c09ffe3b754.png)
