@@ -28,7 +28,7 @@ https://user-images.githubusercontent.com/84890597/130739949-3ac19140-cf47-478f-
 - 注文ステータスが編集できます。
 - お問い合わせ一覧を閲覧することができます。
 
-### サイトテーマ
+## サイトテーマ
 サイト自体が個人で営業をしている居酒屋1店舗をイメージしたデリバリーサービスです。
 
 ### テーマを選んだ理由
@@ -53,7 +53,7 @@ UberEatsや出前館といったフードデリバリーサービスが展開さ
 [テーブル定義書](https://docs.google.com/spreadsheets/d/1wJoCL5v5NUy8w8-taOCsEPqTVeD1AjoR_d6w4cLEPoI/edit?usp=sharing)  
 [アプリケーション詳細設計](https://docs.google.com/spreadsheets/d/1jjsu9M9bQTVGUdmGr63Vau1-EkBs0RHfVih42VboHCU/edit?usp=sharing)
 
-## チャレンジ要素一覧
+### チャレンジ要素一覧
 <https://docs.google.com/spreadsheets/d/1qQZAS1NnTR8KiMhutV0pwhXXS91J_YSqai3LQWOSmek/edit#gid=0>
 
 ### ◆開発環境
